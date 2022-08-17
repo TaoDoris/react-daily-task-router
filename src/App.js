@@ -40,6 +40,15 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/todo" element={<Todo />} />
+          {/* 如果輸入未定義的路由就會顯示 */}
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>404 Not Found</p>
+              </main>
+            }
+          />
         </Routes>
         {/* 練習區 */}
       </BrowserRouter>
